@@ -20,10 +20,11 @@ any(is.na(strength))
 
 Concrete is the most important material in civil engineering, and concrete compressive strength is one determining factor for concrete performance. Concrete chemical compositions, physical formations, as well as age, may impact concrete compressive strength. In courtesy of I-Cheng Yeh from UC Irvine Machine Learning Depository, we look at the data set **Concrete Compressive Strength**, and model for concrete compressive strength using linear regression and random forest. Our goal is to find out the best model and the most important predictors to help us predict for concrete compressive strength.
 
-There are no missing values in our data set.
+## Data Set
 
-In this section, we analyze our data set where we will employ a linear regression model to analyze the impact of various components on the compression strength of concrete. The components and their corresponding measured values are outlined below:"
+The data set contains 1030 observations and 9 variables:
 
+Prdictors:
 - Cement: measured in kilograms per cubic meter (kg/m^3).
 - Blast Furnace slag: measured in kilograms per cubic meter (kg/m^3).
 - Fly Ash: measured in kilograms per cubic meter (kg/m^3).
@@ -32,7 +33,7 @@ In this section, we analyze our data set where we will employ a linear regressio
 - Coarse Aggregate: measured in kilograms per cubic meter (kg/m^3).
 - Fine Aggregate: measured in kilograms per cubic meter (kg/m^3).
 - Age: measured in days.
-And the concrete compression strength: 
+Response: 
 - Concrete compression strength: measured in megapascals (MPa).
 
 The linear regression model we are going to use is: 
