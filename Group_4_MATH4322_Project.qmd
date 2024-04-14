@@ -1,0 +1,22 @@
+---
+title: "Group Project Team 4"
+author: "Alejandro Avila, Anthony Ramirez, Benjamin B An, Chengze Liu, Vishu Kodikanti"
+format: pdf
+editor: visual
+---
+
+## 
+
+```{r}
+#importing the data set and displaying the summary
+strength<-read.csv("C:/Users/alex-/OneDrive/Desktop/Concrete.csv")
+summary(strength)
+
+```
+```{r}
+any(is.na(strength))
+```
+
+```{r}
+plot(strength$Cement)
+```
