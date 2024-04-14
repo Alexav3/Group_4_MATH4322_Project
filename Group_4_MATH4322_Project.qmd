@@ -1,6 +1,7 @@
 ---
-title: "Group Project Team 4"
-author: "Alejandro Avila, Anthony Ramirez, Benjamin B An, Chengze Liu, Vishu Kodikanti"
+title: "Concrete Compressive Strength."
+subtitle: "Group 4 Team Project."
+author: "Alejandro Avila, Anthony Ramirez, Benjamin B An, Chengze Liu, Vishu Kodikanti."
 format: pdf
 editor: visual
 ---
@@ -22,7 +23,7 @@ Concrete is the most important material in civil engineering, and concrete compr
 
 # Dataset Description
 
-The data set contains 1030 observations and 9 variables:
+We specifically chose a data set to investigate the subtle influence of different materials on concrete compression strength. This data set is made off 1030 observations and includes 9 variables, providing a rich and comprehensive resource for our analysis. In the following sections, we will detail the information about these variables:
 
 ## Predictors:
 
