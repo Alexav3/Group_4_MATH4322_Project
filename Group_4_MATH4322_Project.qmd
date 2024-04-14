@@ -16,7 +16,19 @@ summary(strength)
 ```{r}
 any(is.na(strength))
 ```
+There are no missing values in our data set.
 
-```{r}
-plot(strength$Cement)
-```
+In this section, we analyze our data set where we will employ a linear regression model to analyze the impact of various components on the compression strength of concrete. The components and their corresponding measured values are outlined below:"
+
+- Cement: measured in kilograms per cubic meter (kg/m^3).
+- Blast Furnace slag: measured in kilograms per cubic meter (kg/m^3).
+- Fly Ash: measured in kilograms per cubic meter (kg/m^3).
+- Water: measured in kilograms per cubic meter (kg/m^3).
+- Superplasticizer: measured in kilograms per cubic meter (kg/m^3).
+- Coarse Aggregate: measured in kilograms per cubic meter (kg/m^3).
+- Fine Aggregate: measured in kilograms per cubic meter (kg/m^3).
+- Age: measured in days.
+And the concrete compression strength: 
+- Concrete compression strength: measured in megapascals (MPa).
+
+
