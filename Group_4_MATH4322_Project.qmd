@@ -32,6 +32,6 @@ And the concrete compression strength:
 - Concrete compression strength: measured in megapascals (MPa).
 
 The linear regression model we are going to use is: 
-$$
-Strength = \beta_0 +\beta_1 * \text{Cement} + \beta_2 * \text{Blast Furnacne Slag} +\beta_3 * \text{Fly Ash}+\beta_4 * \text{Water}+\beta_5 * \text{Superplasticizer}+ \beta_6 * \text{Coarse Aggregate}+\beta_7 * \text{Fine Aggregate}+\beta_8 * \text{Age}
-$$
+
+Strength = $\beta_0$ +$\beta_1$ $\times$ Cement + $\beta_2$ $\times$ Blast Furnace Slag + $\beta_3$ $\times$ Fly Ash+ $\beta_4$ $\times$ Water
++$\beta_5$ $\times$ Superplasticizer+ $\beta_6$ $\times$ Coarse Aggregate+$\beta_7$ $\times$ Fine Aggregate+ $\beta_8$ $\times$ Age +$\epsilon$
