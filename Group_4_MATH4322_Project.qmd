@@ -3,19 +3,15 @@ title: "Concrete Compressive Strength."
 subtitle: "Group 4 Team Project."
 author: "Alejandro Avila, Anthony Ramirez, Benjamin B An, Chengze Liu, Vishu Kodikanti."
 format: pdf
+highlight-style: github
 editor: visual
 ---
 
-## 
 
-```{r}
-#importing the data set and displaying the summary
-strength<-read.csv("C:/Users/alex-/OneDrive/Desktop/Concrete.csv")
-summary(strength)
 
-```
-```{r}
-any(is.na(strength))
+
+```{r echo=FALSE, out.width = '100%'}
+knitr::include_graphics("concrete.jpg")
 ```
 ## Introduction
 
@@ -23,7 +19,7 @@ Concrete is the most important material in civil engineering, and concrete compr
 
 # Dataset Description
 
-We specifically chose a data set to investigate the subtle influence of different materials on concrete compression strength. This data set is made off 1030 observations and includes 9 variables, providing a rich and comprehensive resource for our analysis. In the following sections, we will detail the information about these variables:
+We chose a data set to investigate the subtle influence of different materials on concrete compression strength. This data set is made off 1030 observations and includes 9 variables, providing a rich and comprehensive resource for our analysis. In the following sections, we will detail the information about these variables:
 
 ## Predictors:
 
@@ -39,6 +35,19 @@ We specifically chose a data set to investigate the subtle influence of differen
 ## Response:
 
 - Concrete compression strength: measured in megapascals (MPa).
+
+
+## 
+
+```{r}
+#importing the data set and displaying the summary
+strength<-read.csv("C:/Users/alex-/OneDrive/Desktop/Concrete.csv")
+summary(strength)
+
+```
+```{r}
+any(is.na(strength))
+```
 
 
 ## Linear Regression
