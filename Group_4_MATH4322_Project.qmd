@@ -94,5 +94,7 @@ set.seed(200)
 rf_train_subset = sample(1:nrow(Concrete), nrow(Concrete)*0.7)
 rf.concrete = randomForest(Concrete_Strength ~ . , data = Concrete, subset =                     rf_train_subset, mtry = ncol((Concrete)-1)/3, importance = TRUE)
 varImpPlot(rf.concrete)
+yhat_test = predict(rf.concrete, newdata = test.sample)
+(rf.MSE = mean(test.sample$Concrete_Strength - yhat_test)^2)
 
 ```
