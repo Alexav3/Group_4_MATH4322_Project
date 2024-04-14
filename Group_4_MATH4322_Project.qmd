@@ -54,3 +54,32 @@ summary(strength.lm)
 par(mfrow = c(2, 2))
 plot(strength.lm)
 ```
+```{r}
+MSE <- rep(0, 10)
+
+for (i in 1:10) {
+  set.seed(i)
+  sample <- sample(1:nrow(strength), 0.8 * nrow(strength))
+  train_data <- strength[sample, ]  
+  test_data <- strength[-sample, ]  
+  
+  numeric_cols <- sapply(train_data, is.numeric)
+  train_data_scaled <- as.data.frame(scale(train_data[, numeric_cols]))
+  test_data_scaled <- as.data.frame(scale(test_data[, numeric_cols]))
+  
+  # Fit linear regression model
+  strength.lm <- lm(Concrete_Strength ~ ., data = train_data_scaled)
+  
+  # Make predictions
+  yhat <- predict(strength.lm, newdata = test_data_scaled)
+  
+  # Calculate MSE
+  MSE[i] <- mean((yhat - test_data_scaled$Concrete_Strength)^2)
+}
+
+cat("MSE Values:", MSE, "\n")
+cat("Average Test MSE:", mean(MSE), "\n")
+
+
+
+```
