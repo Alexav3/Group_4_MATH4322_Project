@@ -20,31 +20,25 @@ any(is.na(strength))
 
 Concrete is the most important material in civil engineering, and concrete compressive strength is one determining factor for concrete performance. Concrete chemical compositions, physical formations, as well as age, may impact concrete compressive strength. In courtesy of I-Cheng Yeh from UC Irvine Machine Learning Depository, we look at the data set **Concrete Compressive Strength**, and model for concrete compressive strength using linear regression and random forest. Our goal is to find out the best model and the most important predictors to help us predict for concrete compressive strength.
 
-## Data Set
+# Dataset Description
 
 The data set contains 1030 observations and 9 variables:
 
-Prdictors:
+## Predictors:
 
-\- Cement: measured in kilograms per cubic meter (kg/m\^3).
+- Cement: measured in kilograms per cubic meter (kg/m^3).
+- Blast Furnace slag: measured in kilograms per cubic meter (kg/m^3).
+- Fly Ash: measured in kilograms per cubic meter (kg/m^3).
+- Water: measured in kilograms per cubic meter (kg/m^3).
+- Superplasticizer: measured in kilograms per cubic meter (kg/m^3).
+- Coarse Aggregate: measured in kilograms per cubic meter (kg/m^3).
+- Fine Aggregate: measured in kilograms per cubic meter (kg/m^3).
+- Age: measured in days.
 
-\- Blast Furnace slag: measured in kilograms per cubic meter (kg/m\^3).
+## Response:
 
-\- Fly Ash: measured in kilograms per cubic meter (kg/m\^3).
+- Concrete compression strength: measured in megapascals (MPa).
 
-\- Water: measured in kilograms per cubic meter (kg/m\^3).
-
-\- Superplasticizer: measured in kilograms per cubic meter (kg/m\^3).
-
-\- Coarse Aggregate: measured in kilograms per cubic meter (kg/m\^3).
-
-\- Fine Aggregate: measured in kilograms per cubic meter (kg/m\^3).
-
-\- Age: measured in days.
-
-Response:
-
-\- Concrete compression strength: measured in megapascals (MPa).
 
 ## Linear Regression
 
