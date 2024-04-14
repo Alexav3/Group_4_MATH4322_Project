@@ -100,7 +100,7 @@ yhat_test = predict(rf.concrete, newdata = test.sample)
 MSE_vector = rep(0,10)
 for (i in 1:10) {
   set.seed(i) 
-  sample <- sample(1:nrow(Concrete), 0.8 * nrow(Concrete))
+  sample <- sample(1:nrow(Concrete), 0.7 * nrow(Concrete))
   train_data <- Concrete[sample, ]
   test_data <- Concrete[-sample, ]
   
