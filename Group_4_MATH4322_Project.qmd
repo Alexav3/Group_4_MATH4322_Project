@@ -36,6 +36,8 @@ Prdictors:
 Response: 
 - Concrete compression strength: measured in megapascals (MPa).
 
+## Linear Regression
+
 The linear regression model we are going to use is: 
 
 Strength = $\beta_0$ +$\beta_1$ $\times$ Cement + $\beta_2$ $\times$ Blast Furnace Slag + $\beta_3$ $\times$ Fly Ash+ $\beta_4$ $\times$ Water
