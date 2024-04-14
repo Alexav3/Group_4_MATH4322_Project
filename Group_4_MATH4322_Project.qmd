@@ -25,16 +25,26 @@ Concrete is the most important material in civil engineering, and concrete compr
 The data set contains 1030 observations and 9 variables:
 
 Prdictors:
-- Cement: measured in kilograms per cubic meter (kg/m^3).
-- Blast Furnace slag: measured in kilograms per cubic meter (kg/m^3).
-- Fly Ash: measured in kilograms per cubic meter (kg/m^3).
-- Water: measured in kilograms per cubic meter (kg/m^3).
-- Superplasticizer: measured in kilograms per cubic meter (kg/m^3).
-- Coarse Aggregate: measured in kilograms per cubic meter (kg/m^3).
-- Fine Aggregate: measured in kilograms per cubic meter (kg/m^3).
-- Age: measured in days.
-Response: 
-- Concrete compression strength: measured in megapascals (MPa).
+
+\- Cement: measured in kilograms per cubic meter (kg/m\^3).
+
+\- Blast Furnace slag: measured in kilograms per cubic meter (kg/m\^3).
+
+\- Fly Ash: measured in kilograms per cubic meter (kg/m\^3).
+
+\- Water: measured in kilograms per cubic meter (kg/m\^3).
+
+\- Superplasticizer: measured in kilograms per cubic meter (kg/m\^3).
+
+\- Coarse Aggregate: measured in kilograms per cubic meter (kg/m\^3).
+
+\- Fine Aggregate: measured in kilograms per cubic meter (kg/m\^3).
+
+\- Age: measured in days.
+
+Response:
+
+\- Concrete compression strength: measured in megapascals (MPa).
 
 ## Linear Regression
 
