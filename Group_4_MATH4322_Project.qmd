@@ -43,7 +43,12 @@ Strength = $\beta_0$ +$\beta_1$ $\times$ Cement + $\beta_2$ $\times$ Blast Furna
 
 #Creating the linear regression model 
 ```{r}
-strength.lm = lm(Concrete_Strength ~ Cement+Blast_Furnance_Slag + Fly_Ash + Water + Superplasticizer + Coarse_Aggregate + Fine_Aggregate + Age, data=strength )
+strength.lm = lm(Concrete_Strength ~ .,data=strength)
 summary(strength.lm)
 
+```
+#creating the plots
+```{r}
+par(mfrow=c(2.2))
+plot(strength.lm)
 ```
