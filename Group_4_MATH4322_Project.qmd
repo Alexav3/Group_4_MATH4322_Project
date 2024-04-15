@@ -38,12 +38,12 @@ The data set provided by the UC Irvine Machine Learning Repository will help us 
 ## Predictors:
 \begin{itemize}
     \item \textbf{\textit{Cement}}: is a continuous numerical value measured in kilograms per cubic meter (kg/m\textsuperscript{3}) and is the binder that sets,hardens and adheres to other materials to bind them together.
-    \item \textbf{\textit{Blast Furnace Slag}}: is an integer numerical value measured in kilograms per cubic meter (kg/m\textsuperscript{3}) and is a byproduct of iron when added to concrete improves its properties suck as workability, strength and durability.
-    \item \textbf{\textit{Fly Ash}}: is a continuous numerical value measured in kilograms per cubic meter (kg/m\textsuperscript{3}) and is a byproduct of coal power plants that can be used to improve durability and workability of concrete mixes.
+    \item \textbf{\textit{Blast\_Furnace\_Slag}}: is an integer numerical value measured in kilograms per cubic meter (kg/m\textsuperscript{3}) and is a byproduct of iron when added to concrete improves its properties suck as workability, strength and durability.
+    \item \textbf{\textit{Fly\_Ash}}: is a continuous numerical value measured in kilograms per cubic meter (kg/m\textsuperscript{3}) and is a byproduct of coal power plants that can be used to improve durability and workability of concrete mixes.
     \item \textbf{\textit{Water}}: is a numerical continuous value measured in kilograms per cubic meter (kg/m\textsuperscript{3}) and water is added to concrete that helps to create a paste that glues all aggregates together.
     \item \textbf{\textit{Superplasticizer}}: is a numerical continuous value measured in kilograms per cubic meter and is an admixture that transforms stiff, low-slump concrete into flowing, pourable and easily placed concrete.
-    \item \textbf{\textit{Coarse Aggregate}}: is a numerical continuous value measured in kilograms per cubic meter (kg/m\textsuperscript{3}) and is typically made up of crushed stone, gravel, or recycled concrete. It is used to provide bulk to the concrete mixture, which helps to reduce shrinkage and cracking.
-    \item \textbf{\textit{Fine Aggregate}}: is a numerical continuous value measured in kilograms per cubic meter (kg/m\textsuperscript{3}) and is a term used to describe small, inert materials, whether granular or crushed stone. These fine aggregates are essential components in concrete mixtures and play a crucial role in determining the properties of the resulting concrete.
+    \item \textbf{\textit{Coarse\_Aggregate}}: is a numerical continuous value measured in kilograms per cubic meter (kg/m\textsuperscript{3}) and is typically made up of crushed stone, gravel, or recycled concrete. It is used to provide bulk to the concrete mixture, which helps to reduce shrinkage and cracking.
+    \item \textbf{\textit{Fine\_Aggregate}}: is a numerical continuous value measured in kilograms per cubic meter (kg/m\textsuperscript{3}) and is a term used to describe small, inert materials, whether granular or crushed stone. These fine aggregates are essential components in concrete mixtures and play a crucial role in determining the properties of the resulting concrete.
     \item \textbf{\textit{Age}}: is an integer numerical value measured in days and this variable refers to the number of days since the concrete sample was created or cast.
 \end{itemize}
 
@@ -51,7 +51,7 @@ The data set provided by the UC Irvine Machine Learning Repository will help us 
 ## Response:
 
 \begin{itemize}
-\item \textbf{\textit{Concrete compression strength}}: is a continuous numerical variable measured in megapascals (MPa) and is our target variable and the megapascal used in material science and engineering that measures the compressive strength of materials in this case concrete.
+\item \textbf{\textit{Concrete\_Strength}}: The target variable in our data set is a continuous numerical value expressed in megapascals (MPa). It represents the compressive strength of materials, in this case concrete, and is widely utilized in material science and engineering for assessing the strength characteristics of substances.
 \end{itemize}
 
 ## Importing the data set.
