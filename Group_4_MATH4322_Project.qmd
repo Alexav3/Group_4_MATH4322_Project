@@ -89,7 +89,17 @@ We get FALSE as a result showing that our dataset does not have any missing valu
 
 ## Linear Regression
 
-The linear regression model we are going to use is: 
+Linear regression is a statistical technique used to understand and quantify the relationship between one or more predictor variables and a continuous outcome variable. In our analysis, we employ linear regression to investigate how changes in certain characteristics of concrete mixtures relate to the compressive strength of the resulting concrete.
+
+The fundamental concept behind linear regression is to find the best-fitting line that represents the relationship between the predictor variables and the outcome variable. This line is characterized by an intercept term ($\beta_0$) and slope coefficients ($\beta_1$,$\beta_2$,..,$\beta_n$) associated with each predictor variable.
+
+The equation of the linear regression model can be expressed as:
+
+p(x)=$\beta_0$ + $\beta_1$ $\times$ $x_1$ + $\beta_2$ $\times$ $x_2$ + ... + $\beta_n$ $\times$ $x_n$
+
+In this equation, p(x)  represents the predicted outcome variable, while $x_1$,$x_2$,...,$x_n$  represent the predictor variables. The coefficients $\beta_0$,$\beta_1$,...,$\beta_n$ are estimated from the data to minimize the difference between the observed and predicted values of the outcome variable.
+
+When we translate this general formula into our model we get the following linear regression model that we can use to predict our outcome: 
 
 Strength = $\beta_0$ +$\beta_1$ $\times$ Cement + $\beta_2$ $\times$ Blast Furnace Slag + $\beta_3$ $\times$ Fly Ash+ $\beta_4$ $\times$ Water
 +$\beta_5$ $\times$ Superplasticizer+ $\beta_6$ $\times$ Coarse Aggregate+$\beta_7$ $\times$ Fine Aggregate+ $\beta_8$ $\times$ Age +$\epsilon$
