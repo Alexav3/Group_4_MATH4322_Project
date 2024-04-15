@@ -58,7 +58,7 @@ The data set provided by the UC Irvine Machine Learning Repository will help us 
 ## Response:
 
 \begin{itemize}
-\item \textbf{\textit{Concrete compression strength}}: is a continuous numerical variable measured in megapascals (MPa) and is our target variable and refers to the amount of force concrete can handle when force is applied.
+\item \textbf{\textit{Concrete compression strength}}: is a continuous numerical variable measured in megapascals (MPa) and is our target variable and the megapascal used in material science and engineering that measures the compressive strength of materials in this case concrete.
 \end{itemize}
 
 ## Importing the data set.
@@ -71,7 +71,7 @@ strength<-read.csv("C:/Users/alex-/OneDrive/Desktop/Concrete.csv")
 summary(strength)
 
 ```
-The summary shows all the predictors that our data set has, we can see cement, Blast_furnace_slag, Fly_Ash, Water
+The summary shows all the predictors that our data set has: cement, Blast_furnace_slag, Fly_Ash, Water, Superplasticizer Coarse_Aggregate, Fine_Aggregate, age and the target variable Concrete_Strength.
 ```{r}
 any(is.na(strength))
 ```
