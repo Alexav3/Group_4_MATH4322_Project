@@ -106,13 +106,16 @@ Strength = $\beta_0$ +$\beta_1$ $\times$ Cement + $\beta_2$ $\times$ Blast Furna
 
 Then we use the following code to create our linear model and to print a summary of our model:
 
-#Creating the linear regression model 
+#Creating the linear regression model and printing summary 
 ```{r}
 strength.lm = lm(Concrete_Strength ~ .,data=strength)
 summary(strength.lm)
 
 ```
-#creating the plots
+From the above summary of our linear regression we can observe that the predictors: Cement, Blast_furnace_slag, Fly_Ash, Water, Superplasticizer and Age are statistically significant in predicting the concrete compressive strength because the p-value is less than the significance level of 0.05, indicating strong evidence against the null hypothesis that the coefficient for these predictors is zero. This means that changes in the amounts of these materials, along with the age of the concrete, have a significant impact on its compressive strength. Additionally, the coefficients for these predictors are positive, suggesting that increases in their amounts lead to higher concrete compressive strength Conversely, the coefficient for Water is negative, indicating that higher water content in the concrete mixture is associated with lower compressive strength. The model's overall performance is reasonably good, with an adjusted R-squared value of 0.6125, indicating that approximately 61.25% of the variability in concrete compressive strength is explained by the predictors included in the model.
+
+While these p-values are slightly above 0.05 for Coarse_Aggregate (0.0544525) and Fine_Aggregate (0.059491), they are still relatively low, indicating that there is some evidence to reject the null hypothesis that the coefficients for these variables are zero.In practical terms, this suggests that there may still be a meaningful relationship between Coarse_Aggregate, Fine_Aggregate, and concrete compressive strength, but their significance is weaker compared to other predictors in the model.Therefore, while Coarse_Aggregate and Fine_Aggregate may not be as strongly associated with concrete compressive strength as other variables in the model, We think they need to be still considered becaue they are relatively close to the significant p-value of 0.05.
+
 ```{r}
 par(mfrow = c(2, 2))
 plot(strength.lm)
