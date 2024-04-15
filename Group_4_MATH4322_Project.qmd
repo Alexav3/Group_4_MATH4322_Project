@@ -116,6 +116,10 @@ From the above summary of our linear regression we can observe that the predicto
 
 While these p-values are slightly above 0.05 for Coarse_Aggregate (0.0544525) and Fine_Aggregate (0.059491), they are still relatively low, indicating that there is some evidence to reject the null hypothesis that the coefficients for these variables are zero.In practical terms, this suggests that there may still be a meaningful relationship between Coarse_Aggregate, Fine_Aggregate, and concrete compressive strength, but their significance is weaker compared to other predictors in the model.Therefore, while Coarse_Aggregate and Fine_Aggregate may not be as strongly associated with concrete compressive strength as other variables in the model, We think they need to be still considered becaue they are relatively close to the significant p-value of 0.05.
 
+## Linear regression plots
+
+We will now create plots for the linear model we have constructed. We will use the following code to generate the Residuals vs Fitted Plot, the Q-Q Residuals Plot, the Scale-Location Plot, and the Residuals vs Leverage Plot. These visual representations will help us better understand our data:
+
 ```{r}
 par(mfrow = c(2, 2))
 plot(strength.lm)
