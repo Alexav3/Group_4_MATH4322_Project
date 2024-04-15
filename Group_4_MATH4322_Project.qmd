@@ -5,37 +5,61 @@ author: "Alejandro Avila, Anthony Ramirez, Benjamin B An, Chengze Liu, Vishu Kod
 format: pdf
 highlight-style: github
 editor: visual
----
+code-block-bg: true
+code-block-border-left: "#31BAE9"
+title-block-style: plain
+header-includes: 
+- \newcommand{\bi}{\begin{itemize}}
+- \newcommand{\ei}{\end{itemize}}
+- \newcommand{\iset}{\setlength\itemsep{1em}}
+- \definecolor{darkgreen}{RGB}{0,100,0} 
+- \definecolor{darkorange}{RGB}{210,102,0}
+- \usepackage{amsbsy}
+- \usepackage{hyperref}
+- \newcommand{\blue}[1]{\textcolor{blue}{#1}}
+- \newcommand{\red}[1]{\textcolor{red}{#1}}
+- \newcommand{\customgreen}[1]{\textcolor{darkgreen}{#1}}
+- \newcommand{\highlighted}[1]{\textcolor{blue}{\colorbox{yellow}{#1}}}
+- \newcommand{\customred}[1]{\textcolor{red}{#1}}
 
+---
 
 
 
 ```{r echo=FALSE, out.width = '100%'}
 knitr::include_graphics("concrete.jpg")
 ```
+
+\newpage
+
+\raggedright
+
 ## Introduction
 
 Concrete is the most important material in civil engineering, and concrete compressive strength is one determining factor for concrete performance. Concrete chemical compositions, physical formations, as well as age, may impact concrete compressive strength. In courtesy of I-Cheng Yeh from UC Irvine Machine Learning Depository, we look at the data set **Concrete Compressive Strength**, and model for concrete compressive strength using linear regression and random forest. Our goal is to find out the best model and the most important predictors to help us predict for concrete compressive strength.
 
-# Dataset Description
+## Dataset Description
 
 We chose a data set to investigate the subtle influence of different materials on concrete compression strength. This data set is made off 1030 observations and includes 9 variables, providing a rich and comprehensive resource for our analysis. In the following sections, we will detail the information about these variables:
 
 ## Predictors:
+\begin{itemize}
+    \item \textbf{\textit{Cement}}: measured in kilograms per cubic meter (kg/m\textsuperscript{3}).
+    \item \textbf{\textit{Blast Furnance Slag}}: measured in kilograms per cubic meter (kg/m\textsuperscript{3}).
+    \item \textbf{\textit{Fly Ash}}: measured in kilograms per cubic meter (kg/m\textsuperscript{3}).
+    \item \textbf{\textit{Water}}: measured in kilograms per cubic meter (kg/m\textsuperscript{3}).
+    \item \textbf{\textit{Superplasticizer}}: measured in kilograms per cubic meter (kg/m\textsuperscript{3}).
+    \item \textbf{\textit{Coarse Aggregate}}: measured in kilograms per cubic meter (kg/m\textsuperscript{3}).
+    \item \textbf{\textit{Fine Aggregate}}: measured in kilograms per cubic meter (kg/m\textsuperscript{3}).
+    \item \textbf{\textit{Age}}: measured in days.
+\end{itemize}
 
-- Cement: measured in kilograms per cubic meter (kg/m^3).
-- Blast Furnace slag: measured in kilograms per cubic meter (kg/m^3).
-- Fly Ash: measured in kilograms per cubic meter (kg/m^3).
-- Water: measured in kilograms per cubic meter (kg/m^3).
-- Superplasticizer: measured in kilograms per cubic meter (kg/m^3).
-- Coarse Aggregate: measured in kilograms per cubic meter (kg/m^3).
-- Fine Aggregate: measured in kilograms per cubic meter (kg/m^3).
-- Age: measured in days.
 
 ## Response:
 
-- Concrete compression strength: measured in megapascals (MPa).
-
+\begin{itemize}
+\item \textbf{\textit{Concrete compression strength}}: measured in megapascals (MPa).
+\end{itemize}
 
 ## 
 
