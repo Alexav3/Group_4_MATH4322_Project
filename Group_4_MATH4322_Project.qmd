@@ -112,7 +112,9 @@ strength.lm = lm(Concrete_Strength ~ .,data=strength)
 summary(strength.lm)
 
 ```
-From the above summary of our linear regression we can observe that the predictors: Cement, Blast_furnace_slag, Fly_Ash, Water, Superplasticizer and Age are statistically significant in predicting the concrete compressive strength because the p-value is less than the significance level of 0.05, indicating strong evidence against the null hypothesis that the coefficient for these predictors is zero. This means that changes in the amounts of these materials, along with the age of the concrete, have a significant impact on its compressive strength. Additionally, the coefficients for these predictors are positive, suggesting that increases in their amounts lead to higher concrete compressive strength Conversely, the coefficient for Water is negative, indicating that higher water content in the concrete mixture is associated with lower compressive strength. The model's overall performance is reasonably good, with an adjusted R-squared value of 0.6125, indicating that approximately 61.25% of the variability in concrete compressive strength is explained by the predictors included in the model.
+From the above summary of our linear regression we can observe that the predictors: Cement, Blast_furnace_slag, Fly_Ash, Water, Superplasticizer and Age are statistically significant in predicting the concrete compressive strength because the p-value is less than the significance level of 0.05, indicating strong evidence against the null hypothesis that the coefficient for these predictors is zero. This means that changes in the amounts of these materials, along with the age of the concrete, have a significant impact on its compressive strength. 
+
+Additionally, the coefficients for these predictors are positive, suggesting that increases in their amounts lead to higher concrete compressive strength Conversely, the coefficient for Water is negative, indicating that higher water content in the concrete mixture is associated with lower compressive strength. The model's overall performance is reasonably good, with an adjusted R-squared value of 0.6125, indicating that approximately 61.25% of the variability in concrete compressive strength is explained by the predictors included in the model.
 
 While these p-values are slightly above 0.05 for Coarse_Aggregate (0.0544525) and Fine_Aggregate (0.059491), they are still relatively low, indicating that there is some evidence to reject the null hypothesis that the coefficients for these variables are zero.In practical terms, this suggests that there may still be a meaningful relationship between Coarse_Aggregate, Fine_Aggregate, and concrete compressive strength, but their significance is weaker compared to other predictors in the model.Therefore, while Coarse_Aggregate and Fine_Aggregate may not be as strongly associated with concrete compressive strength as other variables in the model, We think they need to be still considered becaue they are relatively close to the significant p-value of 0.05.
 
@@ -124,6 +126,15 @@ We will now create plots for the linear model we have constructed. We will use t
 par(mfrow = c(2, 2))
 plot(strength.lm)
 ```
+
+From the Residuals vs Fitted plot, we can visually inspect the relationship between the predicted values and the residuals. This helps in identifying patterns or trends in the residuals, which can indicate potential issues with the model assumptions or data. In our plot, we observe randomness where our points are scattered around zero. This indicates that the model captures all the information in the data, and there are no systematic errors. We don't observe signs of heteroscedasticity, as the fitted values are not correlated with the residuals; they appear to be independent. The plot exhibits a somewhat linear pattern, and the residuals may occasionally become negative as fitted values increase.
+
+From the Q-Q plot, we can determine if the residuals of the regression model are normally distributed. If the points in this plot fall roughly along a straight diagonal line, then we can assume the residuals are normally distributed. In our plot, we observe that the points fall approximately along a straight line, indicating that the data follows the theoretical distribution closely. This suggests a good fit between the data and the chosen distribution, supporting the assumption of normality for the residuals. Additionally, the straight line alignment indicates that the variability of the residuals is consistent across different quantiles, further validating the model's assumptions.
+
+From the Scale-Location plot, we can determine whether the residuals of a regression model exhibit constant variance across the range of fitted values. In out plot we observe the residuals are approximately constant across the range of fitted values this indicates that the assumption of constant variance (homoscedasticity) is met, and the model's residuals have consistent variability across different levels of the predictor variables.
+
+From the Residual vs Leverage plot, we can determine influential observations; if any points in this plot fall outside of Cook’s distance (the dashed lines), then it is considered an influential observation. In our plot, there are no values outside of the dashed lines. This means there aren’t any overly influential points in our dataset.
+
 ## Training testing
 In this section, we will train the linear regression model to evaluate its accuracy. We will begin by creating a randomized 80:20 split (training:testing) in our dataset, then scale the numeric variables, calculate the mean squared error (MSE), and perform 10-fold cross-validation. Finally, we will determine the average MSE based on these 10 iterations.
 ```{r}
@@ -155,8 +166,11 @@ cat("Average Test MSE:", mean(MSE), "\n")
 
 
 ```
+The average test Mean Squared Error (MSE) obtained across all 10 training and testing iterations is 0.3762034. This indicates that, on average, the squared difference between the predicted concrete strength values and the actual values in the test set is 0.376. The Mean Squared Error (MSE) serves as a quantitative measure of how well the model's predictions align with the true values. 
 
-## Random Forest
+By averaging the squared differences between each predicted value and its corresponding actual value, the MSE offers insight into the predictive accuracy of the model. A lower MSE suggests that the model's predictions are closer to the true values, indicating higher predictive accuracy and better performance overall. Given the relatively low MSE value obtained in this analysis, it suggests that the model performs well in predicting concrete strength, making it a good model for this particular dataset.
+
+# Random Forest
 
 We separate the data set to training and test (70/30).
 
