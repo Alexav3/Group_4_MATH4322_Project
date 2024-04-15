@@ -44,21 +44,21 @@ The data set provided by the UC Irvine Machine Learning Repository will help us 
 
 ## Predictors:
 \begin{itemize}
-    \item \textbf{\textit{Cement}}: measured in kilograms per cubic meter (kg/m\textsuperscript{3}).
-    \item \textbf{\textit{Blast Furnance Slag}}: measured in kilograms per cubic meter (kg/m\textsuperscript{3}).
-    \item \textbf{\textit{Fly Ash}}: measured in kilograms per cubic meter (kg/m\textsuperscript{3}).
-    \item \textbf{\textit{Water}}: measured in kilograms per cubic meter (kg/m\textsuperscript{3}).
-    \item \textbf{\textit{Superplasticizer}}: measured in kilograms per cubic meter (kg/m\textsuperscript{3}).
-    \item \textbf{\textit{Coarse Aggregate}}: measured in kilograms per cubic meter (kg/m\textsuperscript{3}).
-    \item \textbf{\textit{Fine Aggregate}}: measured in kilograms per cubic meter (kg/m\textsuperscript{3}).
-    \item \textbf{\textit{Age}}: measured in days.
+    \item \textbf{\textit{Cement}}: is a continuous numerical value measured in kilograms per cubic meter (kg/m\textsuperscript{3}) and is the binder that sets,hardens and adheres to other materials to bind them together.
+    \item \textbf{\textit{Blast Furnace Slag}}: is an integer numerical value measured in kilograms per cubic meter (kg/m\textsuperscript{3}) and is a byproduct of iron when added to concrete improves its properties suck as workability, strength and durability.
+    \item \textbf{\textit{Fly Ash}}: is a continuous numerical value measured in kilograms per cubic meter (kg/m\textsuperscript{3}) and is a byproduct of coal power plants that can be used to improve durability and workability of concrete mixes.
+    \item \textbf{\textit{Water}}: is a numerical continuous value measured in kilograms per cubic meter (kg/m\textsuperscript{3}) and water is added to concrete that helps to create a paste that glues all aggregates together.
+    \item \textbf{\textit{Superplasticizer}}: is a numerical continuous value measured in kilograms per cubic meter and is an admixture that transforms stiff, low-slump concrete into flowing, pourable and easily placed concrete.
+    \item \textbf{\textit{Coarse Aggregate}}: is a numerical continuous value measured in kilograms per cubic meter (kg/m\textsuperscript{3}) and is typically made up of crushed stone, gravel, or recycled concrete. It is used to provide bulk to the concrete mixture, which helps to reduce shrinkage and cracking.
+    \item \textbf{\textit{Fine Aggregate}}: is a numerical continuous value measured in kilograms per cubic meter (kg/m\textsuperscript{3}) and is a term used to describe small, inert materials, whether granular or crushed stone. These fine aggregates are essential components in concrete mixtures and play a crucial role in determining the properties of the resulting concrete.
+    \item \textbf{\textit{Age}}: is an integer numerical value measured in days and this variable refers to the number of days since the concrete sample was created or cast.
 \end{itemize}
 
 
 ## Response:
 
 \begin{itemize}
-\item \textbf{\textit{Concrete compression strength}}: measured in megapascals (MPa).
+\item \textbf{\textit{Concrete compression strength}}: is a continuous numerical variable measured in megapascals (MPa) and is our target variable and refers to the amount of force concrete can handle when force is applied.
 \end{itemize}
 
 ## 
