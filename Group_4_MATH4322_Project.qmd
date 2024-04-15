@@ -40,7 +40,7 @@ Concrete is the most important material in civil engineering, and concrete compr
 
 ## Dataset Description
 
-We chose a data set to investigate the subtle influence of different materials on concrete compression strength. This data set is made off 1030 observations and includes 9 variables, providing a rich and comprehensive resource for our analysis. In the following sections, we will detail the information about these variables:
+The data set provided by the UC Irvine Machine Learning Repository will help us investigate the influence of different materials on concrete compression strength. This data set includes 1030 observations and 9 variables, with 8 of them being predictors and 1 being the response variable, together they provide a rich and comprehensive resource for our analysis. Each piece of data in this data set tells us about a specific mix of materials, how they are assembled, and the conditions they are subjected to. The data set helps to identify all the factors contributing to the strength of concrete. In the following sections, we will provide detailed information about these variables:
 
 ## Predictors:
 \begin{itemize}
