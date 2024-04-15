@@ -104,6 +104,8 @@ When we translate this general formula into our model we get the following linea
 Strength = $\beta_0$ +$\beta_1$ $\times$ Cement + $\beta_2$ $\times$ Blast Furnace Slag + $\beta_3$ $\times$ Fly Ash+ $\beta_4$ $\times$ Water
 +$\beta_5$ $\times$ Superplasticizer+ $\beta_6$ $\times$ Coarse Aggregate+$\beta_7$ $\times$ Fine Aggregate+ $\beta_8$ $\times$ Age +$\epsilon$
 
+Then we use the following code to create our linear model:
+
 #Creating the linear regression model 
 ```{r}
 strength.lm = lm(Concrete_Strength ~ .,data=strength)
