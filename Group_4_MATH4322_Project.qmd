@@ -27,11 +27,11 @@ knitr::include_graphics("concrete.jpg")
 
 \raggedright
 
-## Introduction
+## Introduction.
 
 Concrete is the most important material in civil engineering, and concrete compressive strength is one determining factor for concrete performance. The chemical compositions, physical formations, as well as the age of concrete, may impact its compressive strength. With gratitude to I-Cheng Yeh from UC Irvine Machine Learning Repository, we examine the dataset **Concrete Compressive Strength**. We create two different models using the concrete compressive strength dataset: one utilizing linear regression and the other employing a random forest approach. Our goal is to determine the best model and identify the most significant predictors to aid in predicting concrete compressive strength.
 
-## Dataset Description
+## Dataset Description.
 
 The dataset provided by the UC Irvine Machine Learning Repository will help us investigate the influence of different materials on concrete compression strength. This dataset consists of 1030 observations and 9 variables. Among these, 8 variables serve as predictors, while 1 variable serves as the response variable. Together, they offer a robust and comprehensive dataset that forms the foundation for our analysis. Each piece of data in this dataset tells us about a specific mix of materials, how they are assembled, and the conditions they are subjected to. The dataset helps to identify all the factors contributing to the strength of concrete. In the following sections, we will provide detailed information about these variables:
 
@@ -53,6 +53,7 @@ The dataset provided by the UC Irvine Machine Learning Repository will help us i
 \begin{itemize}
 \item \textbf{\textit{Concrete\_Strength}}: The target variable in our data set is a continuous numerical value expressed in megapascals (MPa). It represents the compressive strength of materials, in this case concrete, and is widely utilized in material science and engineering for assessing the strength characteristics of substances.
 \end{itemize}
+# Linear Regression
 
 ## Importing the data set.
 
@@ -87,7 +88,7 @@ any(is.na(strength))
 ```
 We get FALSE as a result showing that our dataset does not have any missing values.
 
-## Linear Regression
+## Linear Regression description.
 
 Linear regression is a statistical technique used to understand and quantify the relationship between one or more predictor variables and a continuous outcome variable. In our analysis, we employ linear regression to investigate how changes in certain characteristics of concrete mixtures relate to the compressive strength of the resulting concrete.
 
@@ -106,7 +107,7 @@ Strength = $\beta_0$ +$\beta_1$ $\times$ Cement + $\beta_2$ $\times$ Blast Furna
 
 Then we use the following code to create our linear model and to print a summary of our model:
 
-#Creating the linear regression model and printing summary 
+#Creating the linear regression model and printing summary. 
 ```{r}
 strength.lm = lm(Concrete_Strength ~ .,data=strength)
 summary(strength.lm)
@@ -118,7 +119,7 @@ Additionally, the coefficients for these predictors are positive, suggesting tha
 
 While these p-values are slightly above 0.05 for Coarse_Aggregate (0.0544525) and Fine_Aggregate (0.059491), they are still relatively low, indicating that there is some evidence to reject the null hypothesis that the coefficients for these variables are zero.In practical terms, this suggests that there may still be a meaningful relationship between Coarse_Aggregate, Fine_Aggregate, and concrete compressive strength, but their significance is weaker compared to other predictors in the model.Therefore, while Coarse_Aggregate and Fine_Aggregate may not be as strongly associated with concrete compressive strength as other variables in the model, We think they need to be still considered becaue they are relatively close to the significant p-value of 0.05.
 
-## Linear regression plots
+## Linear regression plots.
 
 We will now create plots for the linear model we have constructed. We will use the following code to generate the Residuals vs Fitted Plot, the Q-Q Residuals Plot, the Scale-Location Plot, and the Residuals vs Leverage Plot. These visual representations will help us better understand our data:
 
@@ -135,7 +136,7 @@ From the Scale-Location plot, we can determine whether the residuals of a regres
 
 From the Residual vs Leverage plot, we can determine influential observations; if any points in this plot fall outside of Cook’s distance (the dashed lines), then it is considered an influential observation. In our plot, there are no values outside of the dashed lines. This means there aren’t any overly influential points in our dataset.
 
-## Training testing
+## Training testing.
 In this section, we will train the linear regression model to evaluate its accuracy. We will begin by creating a randomized 80:20 split (training:testing) in our dataset, then scale the numeric variables, calculate the mean squared error (MSE), and perform 10-fold cross-validation. Finally, we will determine the average MSE based on these 10 iterations.
 ```{r}
 MSE <- rep(0, 10)
@@ -170,7 +171,7 @@ The average test Mean Squared Error (MSE) obtained across all 10 training and te
 
 By averaging the squared differences between each predicted value and its corresponding actual value, the MSE offers insight into the predictive accuracy of the model. A lower MSE suggests that the model's predictions are closer to the true values, indicating higher predictive accuracy and better performance overall. Given the relatively low MSE value obtained in this analysis, it suggests that the model performs well in predicting concrete strength, making it a good model for this particular dataset.
 
-# Random Forest
+# Random Forest.
 
 In this section, we will employ a Random Forest model to determine if it provides a better fit for predicting concrete compressive strength. Random forest is a widely used machine learning algorithm, trademarked by Leo Breiman and Adele Cutler, that aggregates the outputs of multiple decision trees to produce a single result. Its ease of use and flexibility have contributed to its widespread adoption, as it effectively addresses both classification and regression tasks.
 
@@ -178,6 +179,7 @@ The random forest algorithm extends the bagging method by incorporating both bag
 
 We start by creating the model with the library called Random Forest: 
 ```{r}
+# Data Modeling:  Random Forest.
 library(randomForest)
 
 ```
@@ -186,16 +188,38 @@ Then separate the data set to training and test into an (80/20) split to keep co
 
 
 ```{r}
-#creating the random 
+# Split into train and test 80/20
 
 set.seed(200)
 rf_train_subset = sample(1:nrow(strength), nrow(strength)*0.8)
 test.sample = strength[-rf_train_subset,]
 rf.strength = randomForest(Concrete_Strength ~ . , data = strength, subset = rf_train_subset, mtry = ncol((strength)-1)/2, importance = TRUE)
+```
+
+In this section, we are implementing a Random Forest algorithm to build a predictive model for concrete compressive strength. Firstly, we set the seed to ensure reproducibility of our results. Then, we create a training subset by randomly selecting 80% of the observations from the dataset "strength". The remaining 20% of the data are retained as a test sample for evaluating the performance of our model. Next, we apply the Random Forest algorithm to the training subset, specifying the response variable "Concrete_Strength" and using all other variables as predictors. We set the number of predictors sampled at each split (mtry) to be half the total number of predictors, a common practice to promote model diversity and reduce overfitting. Finally, we extract the variable importance measures to assess the contribution of each predictor variable to the model's predictive performance.
+
+## The Variable Importance Plot.
+
+We then proceed to write the code to display the importance plot of concrete compressive strength:  
+```{r}
 varImpPlot(rf.strength)
+```
+The plot generated by the varImpPlot (Variable Importance Plot) function provides valuable insights into the most influential predictors identified by the Random Forest model. Upon examination of the plot, it is evident that the variables Age and Cement emerge as the most important predictors of concrete compressive strength. This finding underscores the significant impact of these variables on the strength of concrete. Age likely represents the curing time of the concrete, which affects its overall strength as it continues to harden over time. Cement, on the other hand, serves as a fundamental component of concrete, influencing its binding properties and structural integrity. By identifying Age and Cement as the primary predictors, the plot highlights key factors that should be carefully considered in the formulation and design of concrete mixes to achieve optimal compressive strength.
+
+## Calculating the test Mean Squared Error.
+
+```{r}
 yhat_test = predict(rf.strength, newdata = test.sample)
 (rf.MSE = mean(test.sample$Concrete_Strength - yhat_test)^2)
+cat("MSE Value:",rf.MSE, "\n")
+```
+The test Mean Squared Error (MSE) value of 0.3327317 obtained from the Random Forest model indicates a somewhat better fit compared to the previous MSE of 0.3762034. A lower MSE suggests that the model's predictions are closer to the actual values in the dataset, reflecting improved accuracy. While the difference in MSE values may appear small, even slight improvements in predictive performance can have significant implications, particularly in applications where precision is crucial. Therefore, the decrease in MSE from 0.3762034 to 0.3327317 suggests that the Random Forest model offers a slightly better predictive performance, contributing to a more reliable and accurate model for predicting concrete compressive strength.
 
+## Random Forest cross-validation.
+
+In this section, we are conducting a cross-validation procedure to assess the predictive performance of a Random Forest model for predicting concrete compressive strength. The process involves iterating through 10 random splits of the dataset into training and testing sets. Within each iteration, we set a random seed to ensure reproducibility and randomly sample 80% of the observations for training while retaining the remaining 20% for testing. To prepare the data for modeling, we scale the numeric variables to have zero mean and unit variance using min-max scaling. Subsequently, we fit a Random Forest model to the scaled training data, specifying the response variable "Concrete_Strength" and using all other variables as predictors. After making predictions on the scaled test data, we compute the Mean Squared Error (MSE) as a measure of prediction accuracy. This process is repeated for each iteration, resulting in a vector of MSE values. Finally, we calculate the average test MSE across all iterations to evaluate the overall performance of the Random Forest model in predicting concrete compressive strength.
+
+```{r}
 MSE_vector = rep(0,10)
 for (i in 1:10) {
   set.seed(i) 
@@ -212,7 +236,7 @@ for (i in 1:10) {
                             data = train_data_scaled,
                             mtry = (ncol(strength)-1) / 2, importance = TRUE)
   
-  yhat.rf = predict(concrete.rf, newdata = test_data_scaled)
+  yhat.rf = predict(strength.rf, newdata = test_data_scaled)
   MSE_vector[i] = mean((yhat.rf - test_data_scaled$Concrete_Strength)^2)
 }
 
@@ -220,3 +244,5 @@ cat("MSE Values:", MSE_vector, "\n")
 cat("Average Test MSE:", mean(MSE_vector), "\n")
 
 ```
+
+The results of the cross-validation procedure reveal a range of Mean Squared Error (MSE) values across the 10 iterations. The MSE values range from 0.09089059 to 0.1911249, indicating variability in the predictive performance of the Random Forest model across different training and testing splits of the dataset. Despite this variability, the average test MSE, computed as 0.1268866, provides an overall assessment of the model's predictive accuracy. This relatively low average test MSE suggests that the Random Forest model generally performs well in predicting concrete compressive strength.Notably, when compared to the MSE values obtained from a linear regression model under the same test conditions, the Random Forest model yielded lower average test MSE of 0.1268866. This difference highlights the Random Forest's superior predictive accuracy between the two models.
