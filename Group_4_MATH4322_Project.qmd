@@ -71,7 +71,24 @@ strength<-read.csv("C:/Users/alex-/OneDrive/Desktop/Concrete.csv")
 summary(strength)
 
 ```
-The summary shows all the predictors that our data set has: cement, Blast_furnace_slag, Fly_Ash, Water, Superplasticizer Coarse_Aggregate, Fine_Aggregate, age and the target variable Concrete_Strength.
+The summary shows all the predictors in our data set: \textcolor{black}{\textit{Cement}}, \textcolor{black}{\textit{Blast\_furnace\_slag}}, \textcolor{black}{\textit{Fly\_Ash}}, \textcolor{black}{\textit{Water}}, \textcolor{black}{\textit{Superplasticizer}}, \textcolor{black}{\textit{Coarse\_Aggregate}}, \textcolor{black}{\textit{Fine\_Aggregate}}, \textcolor{black}{\textit{Age}} and the target variable \textcolor{black}{\textit{Concrete\_Strength}}. We can interpret the data as follows: 
+
+\begin{itemize}
+    \item \textbf{\textit{Cement}}: The minimum amount of cement used is 102.0 (kg/m\textsuperscript{3}), and the maximum is 540.0 (kg/m\textsuperscript{3}). The mean of cement used is approximately 281.2 (kg/m\textsuperscript{3}).
+    \item \textbf{\textit{Blast\_Furnace\_Slag}}: The minimum amount of Blast Furnace Slag used is 0.0 (kg/m\textsuperscript{3}), and the maximum is 359.4 (kg/m\textsuperscript{3}). The mean of Blast Furnace Slag used is approximately 73.9 (kg/m\textsuperscript{3}).
+    \item \textbf{\textit{Fly\_Ash}}: The minimum amount of Fly Ash used is 0.0 (kg/m\textsuperscript{3}), and the maximum is 200.1 (kg/m\textsuperscript{3}). The mean of Fly Ash used is approximately 54.19 (kg/m\textsuperscript{3}).
+    \item \textbf{\textit{Water}}: The minimum amount of water used is 121.8 (kg/m\textsuperscript{3}), and the maximum is 247.0 (kg/m\textsuperscript{3}). The mean of water used is approximately 181.6 (kg/m\textsuperscript{3}).
+    \item \textbf{\textit{Superplasticizer}}: The minimum amount of Superplasticizer used is 0.0 (kg/m\textsuperscript{3}), and the maximum is 32.2 (kg/m\textsuperscript{3}). The mean of Superplasticizer used is approximately 6.205 (kg/m\textsuperscript{3}).
+    \item \textbf{\textit{Coarse\_Aggregate}}: The minimum amount of Coarse Aggregate used is 801.0 (kg/m\textsuperscript{3}), and the maximum is 1145.0 (kg/m\textsuperscript{3}). The mean of Coarse Aggregate used is approximately 972.9 (kg/m\textsuperscript{3}).
+    \item \textbf{\textit{Fine\_Aggregate}}: The minimum amount of Fine Aggregate used is 594.0 (kg/m\textsuperscript{3}), and the maximum is 992.6 (kg/m\textsuperscript{3}). The mean of Fine Aggregate used is approximately 773.6 (kg/m\textsuperscript{3}).
+    \item \textbf{\textit{Age}}: The minimum amount of days is one day, and the maximum is 365 days. The mean of Age is approximately 45.66 days.
+    \item \textbf{\textit{Concrete\_Strength}}: The minimum amount of the concrete compressive strength is 2.33 MPa, and the maximum is 82.60 MPa. The mean of the concrete compressive strength is 35.82.
+\end{itemize}
+
+
+
+
+
 ```{r}
 any(is.na(strength))
 ```
