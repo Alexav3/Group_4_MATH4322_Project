@@ -74,7 +74,7 @@ The summary shows all the predictors in our data set: \textcolor{black}{\textit{
     \item \textbf{\textit{Superplasticizer}}: The minimum amount of Superplasticizer used is 0.0 (kg/m\textsuperscript{3}), and the maximum is 32.2 (kg/m\textsuperscript{3}). The mean of Superplasticizer used is approximately 6.205 (kg/m\textsuperscript{3}).
     \item \textbf{\textit{Coarse\_Aggregate}}: The minimum amount of Coarse Aggregate used is 801.0 (kg/m\textsuperscript{3}), and the maximum is 1145.0 (kg/m\textsuperscript{3}). The mean of Coarse Aggregate used is approximately 972.9 (kg/m\textsuperscript{3}).
     \item \textbf{\textit{Fine\_Aggregate}}: The minimum amount of Fine Aggregate used is 594.0 (kg/m\textsuperscript{3}), and the maximum is 992.6 (kg/m\textsuperscript{3}). The mean of Fine Aggregate used is approximately 773.6 (kg/m\textsuperscript{3}).
-    \item \textbf{\textit{Age}}: The minimum amount of days is one day, and the maximum is 365 days. The mean of Age is approximately 45.66 days.
+    \item \textbf{\textit{Age}}: The minimum amount of days in Age is one day, and the maximum is 365 days. The mean of Age is approximately 45.66 days.
     \item \textbf{\textit{Concrete\_Strength}}: The minimum amount of the concrete compressive strength is 2.33 MPa, and the maximum is 82.60 MPa. The mean of the concrete compressive strength is 35.82.
 \end{itemize}
 
