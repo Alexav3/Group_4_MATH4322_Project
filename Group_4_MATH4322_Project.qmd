@@ -124,6 +124,8 @@ We will now create plots for the linear model we have constructed. We will use t
 par(mfrow = c(2, 2))
 plot(strength.lm)
 ```
+## Training testing
+In this section, we will train the linear regression model to evaluate its accuracy. We will begin by creating a randomized 80:20 split (training:testing) in our dataset, then scale the numeric variables, calculate the mean squared error (MSE), and perform 10-fold cross-validation. Finally, we will determine the average MSE based on these 10 iterations.
 ```{r}
 MSE <- rep(0, 10)
 
