@@ -12,15 +12,8 @@ header-includes:
 - \newcommand{\bi}{\begin{itemize}}
 - \newcommand{\ei}{\end{itemize}}
 - \newcommand{\iset}{\setlength\itemsep{1em}}
-- \definecolor{darkgreen}{RGB}{0,100,0} 
-- \definecolor{darkorange}{RGB}{210,102,0}
 - \usepackage{amsbsy}
 - \usepackage{hyperref}
-- \newcommand{\blue}[1]{\textcolor{blue}{#1}}
-- \newcommand{\red}[1]{\textcolor{red}{#1}}
-- \newcommand{\customgreen}[1]{\textcolor{darkgreen}{#1}}
-- \newcommand{\highlighted}[1]{\textcolor{blue}{\colorbox{yellow}{#1}}}
-- \newcommand{\customred}[1]{\textcolor{red}{#1}}
 
 ---
 
@@ -87,12 +80,12 @@ The summary shows all the predictors in our data set: \textcolor{black}{\textit{
 
 
 
-
+Then we check if we have any missing values in our data set: 
 
 ```{r}
 any(is.na(strength))
 ```
-
+We get FALSE as a result showing that our data set does not have any missing values.
 
 ## Linear Regression
 
