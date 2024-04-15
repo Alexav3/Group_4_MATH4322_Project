@@ -29,11 +29,11 @@ knitr::include_graphics("concrete.jpg")
 
 ## Introduction
 
-Concrete is the most important material in civil engineering, and concrete compressive strength is one determining factor for concrete performance. The chemical compositions, physical formations, as well as the age of concrete, may impact its compressive strength. With gratitude to I-Cheng Yeh from UC Irvine Machine Learning Repository, we examine the data set **Concrete Compressive Strength**. We create two different models using the concrete compressive strength data set: one utilizing linear regression and the other employing a random forest approach. Our goal is to determine the best model and identify the most significant predictors to aid in predicting concrete compressive strength.
+Concrete is the most important material in civil engineering, and concrete compressive strength is one determining factor for concrete performance. The chemical compositions, physical formations, as well as the age of concrete, may impact its compressive strength. With gratitude to I-Cheng Yeh from UC Irvine Machine Learning Repository, we examine the dataset **Concrete Compressive Strength**. We create two different models using the concrete compressive strength dataset: one utilizing linear regression and the other employing a random forest approach. Our goal is to determine the best model and identify the most significant predictors to aid in predicting concrete compressive strength.
 
 ## Dataset Description
 
-The data set provided by the UC Irvine Machine Learning Repository will help us investigate the influence of different materials on concrete compression strength. This data set consists of 1030 observations and 9 variables. Among these, 8 variables serve as predictors, while 1 variable serves as the response variable. Together, they offer a robust and comprehensive data set that forms the foundation for our analysis. Each piece of data in this data set tells us about a specific mix of materials, how they are assembled, and the conditions they are subjected to. The data set helps to identify all the factors contributing to the strength of concrete. In the following sections, we will provide detailed information about these variables:
+The dataset provided by the UC Irvine Machine Learning Repository will help us investigate the influence of different materials on concrete compression strength. This dataset consists of 1030 observations and 9 variables. Among these, 8 variables serve as predictors, while 1 variable serves as the response variable. Together, they offer a robust and comprehensive dataset that forms the foundation for our analysis. Each piece of data in this dataset tells us about a specific mix of materials, how they are assembled, and the conditions they are subjected to. The dataset helps to identify all the factors contributing to the strength of concrete. In the following sections, we will provide detailed information about these variables:
 
 ## Predictors:
 \begin{itemize}
@@ -56,7 +56,7 @@ The data set provided by the UC Irvine Machine Learning Repository will help us 
 
 ## Importing the data set.
 
-We read our CSV file and print the data set summary with the following code: 
+We read our CSV file and print the dataset summary with the following code: 
 
 ```{r}
 #importing the data set and displaying the summary
@@ -64,7 +64,7 @@ strength<-read.csv("C:/Users/alex-/OneDrive/Desktop/Concrete.csv")
 summary(strength)
 
 ```
-The summary shows all the predictors in our data set: \textcolor{black}{\textit{Cement}}, \textcolor{black}{\textit{Blast\_furnace\_slag}}, \textcolor{black}{\textit{Fly\_Ash}}, \textcolor{black}{\textit{Water}}, \textcolor{black}{\textit{Superplasticizer}}, \textcolor{black}{\textit{Coarse\_Aggregate}}, \textcolor{black}{\textit{Fine\_Aggregate}}, \textcolor{black}{\textit{Age}} and the target variable \textcolor{black}{\textit{Concrete\_Strength}}. We can interpret the data as follows: 
+The summary shows all the predictors in our dataset: \textcolor{black}{\textit{Cement}}, \textcolor{black}{\textit{Blast\_furnace\_slag}}, \textcolor{black}{\textit{Fly\_Ash}}, \textcolor{black}{\textit{Water}}, \textcolor{black}{\textit{Superplasticizer}}, \textcolor{black}{\textit{Coarse\_Aggregate}}, \textcolor{black}{\textit{Fine\_Aggregate}}, \textcolor{black}{\textit{Age}} and the target variable \textcolor{black}{\textit{Concrete\_Strength}}. We can interpret the data as follows: 
 
 \begin{itemize}
     \item \textbf{\textit{Cement}}: The minimum amount of cement used is 102.0 (kg/m\textsuperscript{3}), and the maximum is 540.0 (kg/m\textsuperscript{3}). The mean of cement used is approximately 281.2 (kg/m\textsuperscript{3}).
@@ -80,12 +80,12 @@ The summary shows all the predictors in our data set: \textcolor{black}{\textit{
 
 
 
-Then we check if we have any missing values in our data set: 
+Then we check if we have any missing values in our dataset: 
 
 ```{r}
 any(is.na(strength))
 ```
-We get FALSE as a result showing that our data set does not have any missing values.
+We get FALSE as a result showing that our dataset does not have any missing values.
 
 ## Linear Regression
 
