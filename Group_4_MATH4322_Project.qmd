@@ -277,3 +277,11 @@ In conclusion, our exploration of linear regression and random forest models for
 On the other hand, the random forest model offers flexibility and robustness, capable of capturing nonlinear relationships and interactions between variables. By aggregating the predictions of multiple decision trees, the random forest model can handle complex data structures and provide accurate predictions. Additionally, the variable importance analysis provided by the random forest model allows us to identify the most influential predictors in determining concrete compressive strength.
 
 Through 10 iterations cross-validation analysis, we calculated the average Mean Squared Error (MSE) for both the Linear Regression and Random Forest models. The average MSE for Linear Regression was found to be 0.3762034, while for Random Forest, it was 0.1258866. Comparing these results, it is evident that the Random Forest model consistently exhibited lower MSE values across multiple iterations. This suggests that the Random Forest model is more accurate in predicting concrete compressive strength compared to Linear Regression. The lower average MSE of the Random Forest model indicates that it provides better predictions on average and is more robust in handling the complexities and non-linearities present in the data. Therefore, based on these findings, we conclude that the Random Forest model appears to be the most accurate among the models to predict the concrete compressive strength between this two models.
+
+# Bibliography
+
+Yeh,I-Cheng. (2007). Concrete Compressive Strength. UCI Machine Learning Repository. <https://doi.org/10.24432/C5PK67.>
+
+# Professional Products
+
+This project uses R, RStudio, "tinytex" package and "randomForest" package.
