@@ -1,7 +1,7 @@
 ---
 title: "Concrete Compressive Strength."
 subtitle: "Group 4 Team Project."
-author: "Alejandro Avila, Anthony Ramirez, Benjamin B An, Chengze Liu, Vishu Kodikanti."
+author: "Alejandro Avila, Anthony Ramirez, Benjamin B An, Chengze Liu (2316609), Vishu Kodikanti."
 format: pdf
 highlight-style: github
 editor: visual
